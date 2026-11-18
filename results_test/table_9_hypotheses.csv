@@ -1,0 +1,7 @@
+id,hypothesis,criterion,result,met
+H1,Non-stable continuative products flagged,≥ 50% (labels: 0%),54%,yes
+H2a,False alarms on stable products,≤ 20%,4%,yes
+H2b,Stable products wrongly classified,≤ 5%,0%,yes
+H3,Missed products have a lower forecast error than flagged ones,median missed < median flagged,24% vs 46%,yes
+H4,Same class with clean and dirty data,≥ 95%,100.0%,yes
+H5,KPI alignment lower for Variable than for Stable,Variable < Stable,71% vs 100%,yes

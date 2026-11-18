@@ -1,0 +1,25 @@
+Frozen version 3.1 of 2026-11-13: model MATCHES
+dss_core.py sha256: 47c403d5c8773aee …  params sha256: a7964fdc3f1b8f5f …  mode: test · dataset: maison_a_test
+Traceback (most recent call last):
+  File "/tmp/claude-0/-home-claude/23224d97-0a71-53bc-a637-f5c6b4dbf937/scratchpad/ds/dss_evaluation.py", line 79, in <module>
+    res, report = dss.run(sales, products, kpi, params)
+                  ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/claude-0/-home-claude/23224d97-0a71-53bc-a637-f5c6b4dbf937/scratchpad/ds/dss_core.py", line 553, in run
+    f["explanation"] = f.apply(explain, axis=1)
+                       ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/pandas/core/frame.py", line 12437, in apply
+    return op.apply().__finalize__(self, method="apply")
+           ~~~~~~~~^^
+  File "/usr/local/lib/python3.13/site-packages/pandas/core/apply.py", line 1015, in apply
+    return self.apply_standard()
+           ~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/local/lib/python3.13/site-packages/pandas/core/apply.py", line 1167, in apply_standard
+    results, res_index = self.apply_series_generator()
+                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/local/lib/python3.13/site-packages/pandas/core/apply.py", line 1183, in apply_series_generator
+    results[i] = self.func(v, *self.args, **self.kwargs)
+                 ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/claude-0/-home-claude/23224d97-0a71-53bc-a637-f5c6b4dbf937/scratchpad/ds/dss_core.py", line 380, in explain
+    why = f"only {int(row.H)} season(s) of sales: variability cannot be estimated reliably"
+                  ~~~^^^^^^^
+ValueError: cannot convert float NaN to integer

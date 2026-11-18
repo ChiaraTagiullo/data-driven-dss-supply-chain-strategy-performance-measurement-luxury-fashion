@@ -1,0 +1,31 @@
+group,parameter,value,source
+Time,number of seasons,10,Design choice (D7): 10 seasons = 5 years
+Time,weeks per season,26,"Two-season calendar (SS: Jan-Jun, FW: Jul-Dec)"
+Portfolio,active styles in current season,500,"Design choice (D7, option b); consistent with catalogue sizes (150-650 styles per category, catalogue_stats)"
+Portfolio,category mix,"{'Bags': 0.45, 'Ready-to-wear': 0.3, 'Shoes': 0.25}","Revenue mix by category of listed maisons (annual reports), D7"
+Portfolio,share of continuative lines (permanent + carry-over) by category,"{'Bags': 0.4, 'Shoes': 0.2, 'Ready-to-wear': 0.05}",Bindi et al. (2023) for bags and footwear; RTW = hypothesis (overall ~23% vs ~20% in Bindi)
+Portfolio,seasonal : capsule ratio among non-continuative,"(45, 35)","Bindi et al. (2023): seasonal ~45%, capsule ~35%"
+Portfolio,share of permanent within continuative,0.25,Hypothesis
+Profiles,carry-over label -> profile mix,"{'stable': 0.45, 'oscillating': 0.4, 'declining': 0.15}",Hypothesis anchored to Bindi et al. (2023): 5 of 9 carry-over cases not lean; subject to sensitivity analysis
+Profiles,permanent label -> profile mix,"{'stable': 0.8, 'oscillating': 0.2}",Hypothesis
+Profiles,share of current seasonal styles already sold in earlier seasons,0.2,Hypothesis
+Profiles,share of current capsules that are special editions of a continuative style,0.2,Hypothesis; bags and shoes only
+Profiles,season-to-season noise (lognormal sigma) range by profile,"{'stable': (0.05, 0.25), 'oscillating': (0.3, 0.7), 'declining': (0.08, 0.25), 'reproposed': (0.6, 1.0)}",Hypothesis; ranges overlap the DSS CV thresholds on purpose (no circularity)
+Profiles,decline rate per season (declining profile),"(0.15, 0.35)",Hypothesis
+Profiles,demand in launch season relative to maturity,0.6,Hypothesis (introduction phase of the product life cycle)
+Life cycle,selling weeks per season,"{'continuative': 26, 'seasonal': 20, 'capsule': 10}","Bindi et al. (2023): seasonal ~20 weeks, capsule ~10 weeks"
+Life cycle,markdown on last 6 weeks of seasonal products,0.3,Hypothesis (end-of-season sales)
+Demand,median units per style per season (lognormal),"{'continuative': 300, 'seasonal': 120, 'capsule': 60}",Hypothesis: only relative levels matter for the DSS
+Demand,dispersion of style levels (lognormal sigma),0.9,"Hypothesis; ABC concentration emerges, it is not imposed"
+Demand,category volume multiplier,"{'Bags': 1.0, 'Shoes': 1.0, 'Ready-to-wear': 0.7}",Hypothesis
+Demand,SS / FW demand multiplier by category,"{'Bags': (1.0, 1.05), 'Shoes': (1.05, 0.95), 'Ready-to-wear': (0.85, 1.15)}",Hypothesis (FW includes holiday peak)
+Catalogue,mean colours per style / price quartiles by category,"{'Bags': {'colours': 2.85, 'p25': 1470.0, 'p50': 1948.0, 'p75': 2518.0}, 'Ready-to-wear': {'colours': 1.23, 'p25': 1068.0, 'p50': 1656.0, 'p75': 2880.0}, 'Shoes': {'colours': 2.04, 'p25': 814.0, 'p50': 895.0, 'p75': 1063.0}}","Online catalogues of Ferragamo, Prada, Gucci, Balenciaga, Tod's (women, Italy), collected 2026-11-06 (catalogue_stats_2026-11-06.csv)"
+Catalogue,sizes per style,"{'Bags': (1, 1), 'Shoes': (10, 14), 'Ready-to-wear': (4, 6)}","Product pages of Ferragamo (shoes 10-14, RTW 5 sizes)"
+Catalogue,price increase per season (backwards from FW25),0.025,"Hypothesis (~5% per year, luxury price increases 2021-2025)"
+Catalogue,carry-over: prob. a colour is dropped / added each season,"(0.25, 0.3)",Hypothesis (carry-over styles are re-coloured each season)
+Supply,production lead time P (weeks),"{'Bags': (8, 12), 'Shoes': (8, 12), 'Ready-to-wear': (10, 14)}",Thomassey (2010); Christopher et al. (2004); industry sources
+Supply,expected delivery time D (weeks),"{'continuative': (2, 4), 'seasonal': (20, 30)}",Replenishment of continuative lines vs. sales-campaign lead time of seasonal collections (D7)
+Supply,suppliers per category,"{'Bags': 12, 'Shoes': 8, 'Ready-to-wear': 15}",Hypothesis
+Supply,materials by category (probability),"{'Bags': [('calf leather', 0.55), ('grained leather', 0.2), ('canvas', 0.15), ('exotic leather', 0.1)], 'Shoes': [('calf leather', 0.6), ('suede', 0.2), ('fabric', 0.15), ('exotic leather', 0.05)], 'Ready-to-wear': [('wool', 0.3), ('silk', 0.2), ('cotton', 0.3), ('cashmere', 0.1), ('leather', 0.1)]}",Hypothesis; precious materials assigned to higher-price styles
+KPI,KPIs measured by label,permanent/carry-over -> lean carry-over set; seasonal/capsule -> seasonal set,"Bindi et al. (2023), KPI configurations (Table 2.5): companies configure KPIs by product line label"
+Dirty data,error rates,"{'missing_rows': 0.03, 'spikes_rows': 0.005, 'spike_factor': (5, 10), 'code_change_styles': 0.03, 'stockout_styles': 0.1, 'duplicate_rows': 0.01, 'return_rows': 0.01, 'missing_lead_time': 0.05}",Hypothesis; typical data-quality problems of retail sales extracts

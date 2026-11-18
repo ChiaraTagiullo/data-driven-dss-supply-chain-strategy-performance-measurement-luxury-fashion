@@ -1,0 +1,15 @@
+,value
+products compared (same code in both runs),485.0
+same class clean vs dirty,0.9958762886597938
+duplicates removed,1195.0
+return rows excluded,1195.0
+spikes smoothed,375.0
+spikes injected,597.0
+active products without OPP (missing lead time),26.0
+code changes injected,15.0
+possible code changes flagged,10.0
+… of which correct,9.0
+… combined-history class equal to clean class,9.0
+false code-change flags on clean data,1.0
+non-stable flagged (dirty),0.7209302325581395
+stable false alarm (dirty),0.12

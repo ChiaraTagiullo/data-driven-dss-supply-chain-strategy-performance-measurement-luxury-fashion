@@ -1,0 +1,163 @@
+Frozen version 3.2 of 2026-11-13: model MATCHES
+dss_core.py sha256: 9ffb6c9a96172eab …  params sha256: a7964fdc3f1b8f5f …  mode: test · dataset: maison_a_test
+500 active products · profiles: {'seasonal': 167, 'capsule': 140, 'stable': 55, 'oscillating': 54, 'reproposed': 45, 'special_edition': 25, 'declining': 14}
+■ Carry-over with stable demand [817650-4JVAL]
+  Stable demand (9 seasons on the market, variability of seasonal sales CV = 0.28) -> Lean; P/D = 5.0 -> ATO (costly materials)
+
+■ Carry-over with variable demand [667345-18H4L]
+  Variable demand (5 seasons on the market, variability of seasonal sales CV = 0.68) -> Hybrid; P/D = 3.7 -> ATO (costly materials and many variants). TO REVIEW: with 5 seasons the CV could lie between 0.30 and 1.06, across both thresholds: the class should be confirmed by the manager (reliable after: about 23 seasons with the same CV, beyond the 6-season window: manager decision)
+
+■ Carry-over close to a boundary [667345-18H4L]
+  Variable demand (5 seasons on the market, variability of seasonal sales CV = 0.68) -> Hybrid; P/D = 3.7 -> ATO (costly materials and many variants). TO REVIEW: with 5 seasons the CV could lie between 0.30 and 1.06, across both thresholds: the class should be confirmed by the manager (reliable after: about 23 seasons with the same CV, beyond the 6-season window: manager decision)
+
+■ Seasonal product re-proposed (irregular) [602446-3CKGL]
+  Irregular demand (3 seasons on the market, variability of seasonal sales CV = 1.28) -> Agile; P/D = 0.5 -> MTO
+
+■ Recent carry-over (too little history) [639873-VLJXX]
+  Insufficient history (only 1 season(s) of sales: variability cannot be estimated reliably) -> Hybrid (prudent); P/D = 4.5 -> ATO (costly materials)
+
+■ Special edition of a classic model [143965-8PVE2]
+  Insufficient history (only 1 season(s) of sales: variability cannot be estimated reliably) -> Hybrid (prudent); P/D = 0.4 -> MTO
+
+■ … its classic model [143965-VDNL5]
+  Stable demand (10 seasons on the market, variability of seasonal sales CV = 0.07) -> Lean; P/D = 3.7 -> ATO (costly materials and many variants)
+
+dss_class         S   V   I    N
+profile                         
+capsule           0   0   0  140
+declining        14   0   0    0
+oscillating      32  12   1    9
+reproposed        0   1  28   16
+seasonal          0   0   0  167
+special_edition   0   0   0   25
+stable           50   0   0    5 
+
+                              Version 1  Version 2  Version 3 (final)  Label-based (today)
+stable products                      50         50                 50                   50
+non-stable products                  59         59                 59                   59
+non-stable classified V/I           22%        22%                22%                   0%
+non-stable flagged                  22%        49%                54%                   0%
+stable classified V/I                0%         0%                 0%                   0%
+stable flagged (false alarm)         0%         4%                 4%                   0%
+
+                     naive forecast error (median)  products
+stable                                       0.17        50
+non-stable flagged                           0.46        32
+non-stable missed                            0.24        27
+                                                value
+carry-over products                         93.000000
+carry-over with enough history              79.000000
+carry-over not stable according to DSS       8.000000
+carry-over too recent to be judged          14.000000
+products needing attention (priority list)  77.000000
+revenue share of priority list               0.225950
+products to move to another KPI checklist   56.000000
+KPI alignment – carry-over (by label)        0.908941
+KPI alignment – Stable class                 1.000000
+KPI alignment – Variable class               0.706294
+KPI alignment – portfolio                    0.979881 
+
+           naive forecast error (median)
+dss_class                               
+I                                   1.31
+N                                   1.50
+S                                   0.22
+V                                   0.65
+
+ dss_class      S  V   I    N
+product_line                
+Permanent     25  5   0    0
+Carry-over    71  7   1   14
+Seasonal       0  1  28  183
+Capsule        0  0   0  165
+             best k  silhouette best k  ARI best k  ARI k=3  uncertain products
+base            2.0              0.521       0.726    0.337                16.0
+alternative     2.0              0.521       0.280    0.198                55.0
+Scenario chosen by the rule: base
+                                            S   V   I    N  to confirm  non-stable flagged  stable flagged (false alarm)  non-stable classified V/I  stable classified V/I
+parameter                      value                                                                                                                                      
+CV thresholds (t1 / t2 = 2·t1) 0.3 / 0.6   69  32  37  362          63                 88%                           22%                        63%                     6%
+                               0.4 / 0.8   88  19  31  362          45                 73%                            8%                        36%                     0%
+                               0.5 / 1.0   96  13  29  362          31                 54%                            4%                        22%                     0%
+                               0.6 / 1.2  101  13  24  362          18                 49%                            0%                        14%                     0%
+                               0.7 / 1.4  105  11  22  362          14                 44%                            0%                         7%                     0%
+attitude (cost ratio)          1.0         96  13  29  362          31                 54%                            4%                        22%                     0%
+                               1.5         95  14  29  362          31                 54%                            4%                        24%                     0%
+                               2.0         94  14  30  362          31                 54%                            4%                        25%                     0%
+                               3.0         89  19  30  362          31                 54%                            4%                        34%                     0%
+                               5.0         82  24  32  362          31                 54%                            4%                        42%                     4%
+confidence of 'to confirm'     0.7         96  13  29  362          27                 53%                            4%                        22%                     0%
+                               0.8         96  13  29  362          31                 54%                            4%                        22%                     0%
+                               0.9         96  13  29  362          35                 59%                            6%                        22%                     0%
+                               0.95        96  13  29  362          39                 64%                            6%                        22%                     0%
+CV window (seasons)            4          101  10  27  362          28                 54%                            2%                        14%                     0%
+                               6           96  13  29  362          31                 54%                            4%                        22%                     0%
+                               8           97  12  30  361          33                 58%                            4%                        20%                     0%
+minimum history (seasons)      2          105  15  42  338          38                 56%                            6%                        21%                     0%
+                               3           96  13  29  362          31                 54%                            4%                        22%                     0%
+                               4           90  13  17  380          29                 56%                            2%                        24%                     0%
+seasonality correction         off         96  13  29  362          30                 53%                            4%                        22%                     0%
+declining-sales drop           0.2         96  13  29  362          31                 63%                           10%                        22%                     0%
+                               0.4         96  13  29  362          31                 51%                            4%                        22%                     0%
+                                                       value
+products compared (same code in both runs)        485.000000
+same class clean vs dirty                           1.000000
+duplicates removed                               1159.000000
+return rows excluded                             1154.000000
+spikes smoothed                                   361.000000
+spikes injected                                   577.000000
+active products without OPP (missing lead time)    19.000000
+code changes injected                              15.000000
+possible code changes flagged                      13.000000
+… of which correct                                 13.000000
+… combined-history class equal to clean class      13.000000
+false code-change flags on clean data               0.000000
+non-stable flagged (dirty)                          0.510204
+stable false alarm (dirty)                          0.044444
+                            requirement                                                                                                                evidence
+id                                                                                                                                                             
+R1  Classify the product, not the label  8 carry-over products classified differently from their label; special editions kept separate from their classic model
+R2      Use data companies already have                                 only product master data and a weekly sales extract; ground truth never read by the DSS
+R3    Handle short histories explicitly                           362 products in 'too little history'; CV interval and 'to confirm' flag for uncertain classes
+R4             Consider the supply side                                          P/D, material value and variants set the order penetration point (MTS/ATO/MTO)
+R5              Transparent suggestions                     every product has an explanation (why / what to do) and a visual of its position against thresholds
+R6   Link to KPIs and measure alignment                                  KPI alignment by product, class and line; 56 products to move to another KPI checklist
+R7  Support, do not replace the manager                                         editable thresholds and attitude; confirm/change decisions saved and propagated
+R8             Robust to imperfect data                                                         100.0% same class clean vs dirty; 13 of 15 code changes flagged
+R9              Repeatable and scalable                                                full portfolio analysed in seconds; same code for notebook and dashboard
+                                seed stable products non-stable products non-stable classified V/I non-stable flagged stable classified V/I stable flagged (false alarm) too little history to confirm same class clean vs dirty code changes flagged correctly
+S1 more unstable carry-over     3001              44                  62                       26%                66%                    0%                           7%                362         43                       99%                           7/15
+S2 noisier sales (x1.5)         3002              66                  42                       48%                79%                    5%                          11%                363         39                      100%                           9/15
+S3 calmer sales (x0.5)          3003              49                  56                       11%                38%                    0%                           0%                363         13                      100%                           7/15
+S4 shorter history (6 seasons)  3004              51                  45                       31%                73%                    0%                           4%                376         33                      100%                          13/15
+S5 dirtier data (errors x2)     3005              51                  61                       30%                75%                    0%                          10%                364         45                      100%                          20/30
+Reference (main dataset)           –              50                  59                       22%                54%                    0%                           4%                362         31                      100%                          13/15
+                                                        hypothesis                       criterion       result  met
+id                                                                                                                  
+H1                        Non-stable continuative products flagged              ≥ 50% (labels: 0%)          54%  yes
+H2a                                False alarms on stable products                           ≤ 20%           4%  yes
+H2b                             Stable products wrongly classified                            ≤ 5%           0%  yes
+H3   Missed products have a lower forecast error than flagged ones  median missed < median flagged   24% vs 46%  yes
+H4                            Same class with clean and dirty data                           ≥ 95%       100.0%  yes
+H5                KPI alignment lower for Variable than for Stable               Variable < Stable  71% vs 100%  yes
+# Evaluation summary – test (maison_a_test)
+
+Model: frozen version 3.2 (2026-11-13), dss_core.py 9ffb6c9a96172eab…, parameters a7964fdc3f1b8f5f…
+
+## Pre-registered hypotheses
+| id   | hypothesis                                                    | criterion                      | result      | met   |
+|:-----|:--------------------------------------------------------------|:-------------------------------|:------------|:------|
+| H1   | Non-stable continuative products flagged                      | ≥ 50% (labels: 0%)             | 54%         | yes   |
+| H2a  | False alarms on stable products                               | ≤ 20%                          | 4%          | yes   |
+| H2b  | Stable products wrongly classified                            | ≤ 5%                           | 0%          | yes   |
+| H3   | Missed products have a lower forecast error than flagged ones | median missed < median flagged | 24% vs 46%  | yes   |
+| H4   | Same class with clean and dirty data                          | ≥ 95%                          | 100.0%      | yes   |
+| H5   | KPI alignment lower for Variable than for Stable              | Variable < Stable              | 71% vs 100% | yes   |
+
+## Key results
+- Non-stable continuative products flagged: 54% (labels: 0%); classified Variable/Irregular: 22%
+- False alarms on stable products: 4%; stable wrongly classified: 0%
+- Clustering: scenario chosen by the rule = base (ARI base 0.726, alternative 0.28)
+- Dirty data: 100% same class; code changes flagged 13/15
+- Carry-over not stable: 8 of 79 with enough history
+

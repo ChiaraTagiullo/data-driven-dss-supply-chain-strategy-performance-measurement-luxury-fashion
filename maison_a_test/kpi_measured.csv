@@ -1,0 +1,97 @@
+product_line,process,kpi
+Permanent,New product development,Total cost of new product development
+Permanent,Plan,Total cost of supply chain management
+Permanent,Source,Total supplier-related costs
+Permanent,Source,Total raw material cost
+Permanent,Source,% of orders received on time
+Permanent,Source,% of orders with delivery date variation
+Permanent,Source,% of compliant orders received
+Permanent,Source,Total inventory costs
+Permanent,Source,Obsolescence costs
+Permanent,Source,Returned transport cost
+Permanent,Source,Raw material shipping cost
+Permanent,Make,Total production cost
+Permanent,Make,Productive effectiveness
+Permanent,Make,% of non-conformity on total product
+Permanent,Make,% of orders with delivery date variation during production
+Permanent,Make,Capacity saturation
+Permanent,Deliver,% of shipments handled on time
+Permanent,Deliver,% of compliant orders filled
+Permanent,Deliver,Average time to receive a product at the store
+Permanent,Deliver,Service level
+Permanent,Deliver,New product success rate
+Permanent,Return,Number of products returned for non-compliance
+Carry-over,New product development,Total cost of new product development
+Carry-over,Plan,Total cost of supply chain management
+Carry-over,Source,Total supplier-related costs
+Carry-over,Source,Total raw material cost
+Carry-over,Source,% of orders received on time
+Carry-over,Source,% of orders with delivery date variation
+Carry-over,Source,% of compliant orders received
+Carry-over,Source,Total inventory costs
+Carry-over,Source,Obsolescence costs
+Carry-over,Source,Returned transport cost
+Carry-over,Source,Raw material shipping cost
+Carry-over,Make,Total production cost
+Carry-over,Make,Productive effectiveness
+Carry-over,Make,% of non-conformity on total product
+Carry-over,Make,% of orders with delivery date variation during production
+Carry-over,Make,Capacity saturation
+Carry-over,Deliver,% of shipments handled on time
+Carry-over,Deliver,% of compliant orders filled
+Carry-over,Deliver,Average time to receive a product at the store
+Carry-over,Deliver,Service level
+Carry-over,Deliver,New product success rate
+Carry-over,Return,Number of products returned for non-compliance
+Seasonal,New product development,Total cost of new product development
+Seasonal,New product development,Total cost of the realised prototypes
+Seasonal,New product development,Total cost of samples produced
+Seasonal,New product development,Cost of prototypes on total production cost (%)
+Seasonal,New product development,Industrialisation cost on production cost (%)
+Seasonal,Plan,Total cost of supply chain management
+Seasonal,Plan,Forecast accuracy
+Seasonal,Plan,Forecast volatility
+Seasonal,Source,% of orders received on time
+Seasonal,Source,% of orders received with the correct quantity
+Seasonal,Source,% of orders with delivery date variation
+Seasonal,Source,Number of change order requests fulfilled
+Seasonal,Source,% of compliant orders received
+Seasonal,Source,Accessible information on total information
+Seasonal,Source,Total raw material cost
+Seasonal,Make,Productive effectiveness
+Seasonal,Make,% of non-conformity on total product
+Seasonal,Make,% of available capacity
+Seasonal,Make,% of orders with delivery date variation during production
+Seasonal,Make,Time to market
+Seasonal,Deliver,% of shipments handled on time
+Seasonal,Deliver,% of compliant orders filled
+Seasonal,Deliver,Average time to receive a product at the store
+Seasonal,Deliver,Service level
+Seasonal,Deliver,New product success rate
+Seasonal,Return,Number of products returned for non-compliance
+Capsule,New product development,Total cost of new product development
+Capsule,New product development,Total cost of the realised prototypes
+Capsule,New product development,Total cost of samples produced
+Capsule,New product development,Cost of prototypes on total production cost (%)
+Capsule,New product development,Industrialisation cost on production cost (%)
+Capsule,Plan,Total cost of supply chain management
+Capsule,Plan,Forecast accuracy
+Capsule,Plan,Forecast volatility
+Capsule,Source,% of orders received on time
+Capsule,Source,% of orders received with the correct quantity
+Capsule,Source,% of orders with delivery date variation
+Capsule,Source,Number of change order requests fulfilled
+Capsule,Source,% of compliant orders received
+Capsule,Source,Accessible information on total information
+Capsule,Source,Total raw material cost
+Capsule,Make,Productive effectiveness
+Capsule,Make,% of non-conformity on total product
+Capsule,Make,% of available capacity
+Capsule,Make,% of orders with delivery date variation during production
+Capsule,Make,Time to market
+Capsule,Deliver,% of shipments handled on time
+Capsule,Deliver,% of compliant orders filled
+Capsule,Deliver,Average time to receive a product at the store
+Capsule,Deliver,Service level
+Capsule,Deliver,New product success rate
+Capsule,Return,Number of products returned for non-compliance

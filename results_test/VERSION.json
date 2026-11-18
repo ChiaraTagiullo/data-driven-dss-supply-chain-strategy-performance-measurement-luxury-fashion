@@ -1,0 +1,52 @@
+{
+  "version": "3.2",
+  "frozen_on": "2026-11-13",
+  "dss_core_sha256": "9ffb6c9a96172eab1c65a697d111613f9e214af395cb100a6c62e2efb0c54d06",
+  "params_sha256": "a7964fdc3f1b8f5f22923590d65e1cef0a137ffd2c4e56328d73b5e8f2fca4c8",
+  "params": {
+    "current_season": "FW25",
+    "cv_window": 6,
+    "min_history": 3,
+    "cv_thresholds": [
+      0.5,
+      1.0
+    ],
+    "abc_cuts": [
+      0.8,
+      0.95
+    ],
+    "pd_threshold": 1.0,
+    "high_quantile": 0.6666666666666666,
+    "trend_min_history": 4,
+    "trend_drop": 0.3,
+    "spike_factor": 4.0,
+    "spike_min_excess": 8,
+    "deseasonalise": true,
+    "review_confidence": 0.8,
+    "cost_ratio": 1.0,
+    "decline_to_review": true,
+    "relaunch_check": true,
+    "relaunch_price_tol": 0.1,
+    "relaunch_recent": 3
+  },
+  "history": [
+    {
+      "version": "3.0",
+      "frozen_on": "2026-11-10",
+      "dss_core_sha256": "5b663c5954a4abe3be35e6e8a6ff97de3dff3eeb86a085f43dd11a79ae2077c4"
+    },
+    {
+      "version": "3.1",
+      "frozen_on": "2026-11-13",
+      "change": "Bug fix found in the dry run of the stress tests (development-generated data, before the test): in the possible-code-change check, an old code could be matched to two new codes, which stopped the run. Matching is now one-to-one. Outputs on the development data are identical to version 3.0 (clean and dirty).",
+      "dss_core_sha256": "47c403d5c8773aeeaf606492bfc7e0dc117b2f3a281b6ba2d234ce52c7145702"
+    },
+    {
+      "version": "3.2",
+      "frozen_on": "2026-11-13",
+      "change": "Bug fix after the first test run stopped at its first step, before any result was computed: an active product with no sales recorded made the explanation step fail (missing number of seasons). Such products now get 0 seasons, zero revenue and the class 'too little history' ('no sales recorded yet'). On the development data and on the five development stress datasets (clean and dirty) all outputs are numerically identical to version 3.1.",
+      "dss_core_sha256": "9ffb6c9a96172eab1c65a697d111613f9e214af395cb100a6c62e2efb0c54d06"
+    }
+  ],
+  "note": "Version evaluated on the test dataset (maison_a_test, seed 2027) and on the stress datasets (seeds 3001-3005). Development dataset: maison_a (seed 2026)."
+}

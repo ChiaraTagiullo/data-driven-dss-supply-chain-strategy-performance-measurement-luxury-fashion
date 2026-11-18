@@ -1,0 +1,7 @@
+{
+  "S1 more unstable carry-over": {"profile_mix_co": {"stable": 0.30, "oscillating": 0.50, "declining": 0.20}},
+  "S2 noisier sales (x1.5)": {"noise_mult": 1.5},
+  "S3 calmer sales (x0.5)": {"noise_mult": 0.5},
+  "S4 shorter history (6 seasons)": {"n_seasons": 6},
+  "S5 dirtier data (errors x2)": {"dirty_mult": 2}
+}

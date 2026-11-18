@@ -1,0 +1,5 @@
+,stable products,non-stable products,non-stable classified V/I,non-stable flagged,stable classified V/I,stable flagged (false alarm)
+Version 1,50.0,59.0,0.22033898305084745,0.22033898305084745,0.0,0.0
+Version 2,50.0,59.0,0.22033898305084745,0.4915254237288136,0.0,0.04
+Version 3 (final),50.0,59.0,0.22033898305084745,0.5423728813559322,0.0,0.04
+Label-based (today),50.0,59.0,0.0,0.0,0.0,0.0

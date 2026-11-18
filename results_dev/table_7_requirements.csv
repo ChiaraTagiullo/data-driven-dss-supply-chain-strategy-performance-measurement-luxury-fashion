@@ -1,0 +1,10 @@
+id,requirement,evidence
+R1,"Classify the product, not the label",14 carry-over products classified differently from their label; special editions kept separate from their classic model
+R2,Use data companies already have,only product master data and a weekly sales extract; ground truth never read by the DSS
+R3,Handle short histories explicitly,366 products in 'too little history'; CV interval and 'to confirm' flag for uncertain classes
+R4,Consider the supply side,"P/D, material value and variants set the order penetration point (MTS/ATO/MTO)"
+R5,Transparent suggestions,every product has an explanation (why / what to do) and a visual of its position against thresholds
+R6,Link to KPIs and measure alignment,"KPI alignment by product, class and line; 55 products to move to another KPI checklist"
+R7,"Support, do not replace the manager",editable thresholds and attitude; confirm/change decisions saved and propagated
+R8,Robust to imperfect data,99.6% same class clean vs dirty; 9 of 15 code changes flagged
+R9,Repeatable and scalable,full portfolio analysed in seconds; same code for notebook and dashboard

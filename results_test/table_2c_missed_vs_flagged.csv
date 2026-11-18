@@ -1,0 +1,4 @@
+,naive forecast error (median),products
+stable,0.17193995232581843,50
+non-stable flagged,0.46497461928934014,32
+non-stable missed,0.23610106088111954,27
