@@ -2,6 +2,8 @@
 
 Replication package of the master's thesis of **Chiara Tagiullo** – MSc in Management Engineering (Business Intelligence and Analytics), Sapienza University of Rome, 2026.
 
+**Live dashboard:** https://maison-a-dss.streamlit.app/ (development data of the simulated company Maison A; decisions saved online are kept only while the app is running).
+
 This repository contains everything needed to reproduce Chapter 5 of the thesis: the decision support system (DSS), its dashboard, the generator of the simulated company *Maison A*, the datasets, the evaluation notebook, the preregistration of the final evaluation and its results.
 
 > **Note on the data.** All data in this repository are simulated. No real company data were used. The generator is calibrated on published figures (Bindi et al., 2023) and on the public online catalogues of five luxury maisons; its parameters and sources are listed in `maison_a/parameters_sources.csv` and in Appendix B of the thesis.
@@ -54,7 +56,8 @@ Requires Python 3.10 or later.
 ```bash
 pip install -r requirements.txt
 
-# Open the dashboard (development data of Maison A)
+# Open the dashboard locally (development data of Maison A)
+# or use the online version: https://maison-a-dss.streamlit.app/
 streamlit run app.py
 ```
 
